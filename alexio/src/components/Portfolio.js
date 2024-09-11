@@ -49,7 +49,7 @@ const Portfolio = () => {
       name={"portfolio"}
       title={"My Projects"}
       subTitle={"Latest Work"}
-      leftImage="static/img/title-3.jpg"
+      leftImage="static/img/user2.png"
     >
       <div className="portfolio-section">
         <div className="portfolio-filter m-10px-b">

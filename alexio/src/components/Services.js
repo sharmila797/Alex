@@ -6,7 +6,7 @@ const Services = () => {
       extraClass={"resume-section"}
       title={"My Resume"}
       subTitle={"History"}
-      leftImage="static/img/title-2.jpg"
+      leftImage="static/img/user2.png"
     >
       <div className="row">
         <div className="col-md-6">
