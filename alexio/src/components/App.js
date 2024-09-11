@@ -1,16 +1,17 @@
 // App.js
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomeBanner from  "./components/HomeBanner";
-import Contact from  "./components/Contact";
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomeBanner from  "./HomeBanner";
+import Contact from  "./Contact";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
       <Route path="/" element={<HomeBanner />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 

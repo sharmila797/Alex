@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { AlexioContext } from "../Context";
 import TypingAnimation from "./TypingAnimation";
-import Contact from "./Contact";
+import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const HomeBanner = () => {
   const { nav, changeNav } = useContext(AlexioContext);
@@ -36,7 +37,7 @@ const HomeBanner = () => {
                         Download CV
                       </a>
                      
-
+                     {/* <Link to='/contact' className="btn btn-theme">Contact</Link> */}
                       
                     </div>
                   </div>
