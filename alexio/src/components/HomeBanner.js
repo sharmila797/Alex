@@ -33,11 +33,11 @@ const HomeBanner = () => {
                      <TypingAnimation />
                     </p>
                     <div className="btn-bar">
-                      <a  href="/contact" className="btn btn-theme">
-                        Download CV
+                      <a  href="contact" className="btn btn-theme">
+                        Contact me
                       </a>
-                     
-                     {/* <Link to='/contact' className="btn btn-theme">Contact</Link> */}
+               
+                     {/* <link href='/contact' className="btn btn-theme">Contact</link> */}
                       
                     </div>
                   </div>

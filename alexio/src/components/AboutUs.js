@@ -5,18 +5,18 @@ const AboutUs = () => {
     <SectionContainer
       name={"about"}
       extraClass="about-section"
-      title={"About"}
+      title={"About Me"}
       subTitle={"WHO I AM"}
       leftImage="static/img/user2.png"
       leftImageTitle={"About Me"}
     >
       <div className="row">
-        <div className="col-md-4">
+        {/* <div className="col-md-4">
           <img src="static/img/user2.png" title alt />
-        </div>
-        <div className="col-md-8 md-m-30px-t">
+        </div> */}
+        <div className="col-md-11 md-m-30px-t">
           <div className="about-text">
-            <h3 className="dark-color">I'm Anand babu</h3>
+            <h3 className="dark-color">I'm Anand Babu</h3>
             <p className="m-0px">
             Welcome to my professional corner on the web! I'm an organizational sociologist and a results-oriented
              facilitator and performance coach. My journey in the world of learning and development has been deeply 
@@ -107,7 +107,7 @@ const AboutUs = () => {
           {/* row */}
           <div className="btn-bar">
             <a href="#" className="btn btn-theme">
-              Download CV
+             Contact me
             </a>
           </div>
         </div>

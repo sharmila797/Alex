@@ -23,9 +23,10 @@ const SectionContainer = ({
       <div className="container-fluid p-0">
         <div className="row no-gutters">
           <div
-            className="col-lg-3 col-xl-4 page-title"
-            style={{ backgroundImage: `url(${leftImage})` }}
-          >
+            className="col-lg-3 col-xl-4 " //page-title
+            // style={{ backgroundImage: `url(${leftImage})`}}
+           > 
+           <img src="static/img/user2.png" alt title  style={{height:'110%',width:'100%'}}/>
             <div className="v-center-box d-flex align-items-end">
               <h2>{leftImageTitle ? leftImageTitle : title}</h2>
             </div>

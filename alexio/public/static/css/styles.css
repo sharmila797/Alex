@@ -259,7 +259,8 @@ body.dark-body {
   height: 2px;
   right: 50px;
   bottom: 50px;
-  left: 45px;
+   left: 45px; 
+
   background: #fff;
   z-index: 1;
   position: absolute;
