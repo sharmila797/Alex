@@ -1,5 +1,5 @@
 import SectionContainer from "./SectionContainer";
-
+import contact from "./Contact";
 const AboutUs = () => {
   return (
     <SectionContainer
@@ -106,7 +106,7 @@ const AboutUs = () => {
           </div>{" "}
           {/* row */}
           <div className="btn-bar">
-            <a href="#" className="btn btn-theme">
+            <a href="/Contact" className="btn btn-theme">
              Contact me
             </a>
           </div>

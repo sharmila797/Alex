@@ -26,7 +26,7 @@ const SectionContainer = ({
             className="col-lg-3 col-xl-4 " //page-title
             // style={{ backgroundImage: `url(${leftImage})`}}
            > 
-           <img src="static/img/user2.png" alt title  style={{height:'110%',width:'100%'}}/>
+           <img src="static/img/user2.png" alt title  style={{height:'110%',width:'150%'}}/>
             <div className="v-center-box d-flex align-items-end">
               <h2>{leftImageTitle ? leftImageTitle : title}</h2>
             </div>
