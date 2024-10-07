@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AlexioContext } from "../Context";
 import TypingAnimation from "./TypingAnimation";
 import { Link } from "react-router-dom";
@@ -7,13 +7,27 @@ import Contact from "./Contact";
 
 const HomeBanner = () => {
   const[state,setstate]=useState({key:0})
-  const { nav,changeNav } = useContext(AlexioContext);
+  const { changeNav, toggle, nav } = useContext(AlexioContext);
   const activePageClass = () => ("home" === nav ? "" : "page--inactive");
+
+
+  useEffect(() => {
+    const pages = document.querySelectorAll(".page");
+    console.log("pages count", pages);
+    console.log("nav bar", nav);
+    console.log("toggle", toggle);
+
+    // Loop through each page
+},[toggle, nav]);
+
+
+
   return (
     <div
       className={`page home-banner white-bg ${activePageClass("home")}`}
       id={"home"}
-      onClick={() => changeNav("home", false)}
+      //07-10-2024 changes
+      // onClick={() => changeNav("home", false)}
     >
       
       <div className="container-fluid p-0">
@@ -47,7 +61,10 @@ const HomeBanner = () => {
                         Contact me
                       </button> */}
                
-                     <a href='/contact' className="btn btn-theme">Contact me</a>
+                     {/* <a href='/contact' className="btn btn-theme">Contact me</a> */} 
+                     <button   className="btn btn-theme" onClick={() => changeNav("contact", false)}>
+          Contact Me
+        </button>
                       
                     </div>
                   </div>

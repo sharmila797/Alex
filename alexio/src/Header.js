@@ -9,7 +9,10 @@ const Header = () => {
       <div className="menu-toggle">
         <button
           className={`menu-button ${toggle ? "menu-button--open" : ""}`}
-          onClick={() => changeNav(nav, !toggle)}
+          onClick={() =>
+           
+            changeNav(nav, !toggle)
+          }
         >
           <span>Menu</span>
         </button>
