@@ -23,7 +23,7 @@ const SectionContainer = ({
       <div className="container-fluid p-0">
         <div className="row no-gutters">
           <div
-            className="col-lg-3 col-xl-4 " //page-title
+            className="col-lg-4 col-xl-5 " //page-title
             // style={{ backgroundImage: `url(${leftImage})`}}
            > 
            <img src="static/img/user2.png" alt title  style={{height:'110%',width:'150%'}}/>
@@ -31,7 +31,7 @@ const SectionContainer = ({
               <h2>{leftImageTitle ? leftImageTitle : title}</h2>
             </div>
           </div>
-          <div className="col-lg-9 col-xl-8">
+          <div className="col-lg-8 col-xl-7">
             <div className="page-scroll">
               <div className="page-content">
                 {/* 

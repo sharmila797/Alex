@@ -47,7 +47,7 @@ const HomeBanner = () => {
                         Contact me
                       </button> */}
                
-                     <a href='/contac' className="btn btn-theme">Contact me</a>
+                     <a href='/contact' className="btn btn-theme">Contact me</a>
                       
                     </div>
                   </div>
