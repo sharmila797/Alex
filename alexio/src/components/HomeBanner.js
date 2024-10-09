@@ -3,7 +3,6 @@ import { AlexioContext } from "../Context";
 import TypingAnimation from "./TypingAnimation";
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
-import Contact from "./Contact";
 
 const HomeBanner = () => {
   const[state,setstate]=useState({key:0})
@@ -11,14 +10,14 @@ const HomeBanner = () => {
   const activePageClass = () => ("home" === nav ? "" : "page--inactive");
 
 
-  useEffect(() => {
-    const pages = document.querySelectorAll(".page");
-    console.log("pages count", pages);
-    console.log("nav bar", nav);
-    console.log("toggle", toggle);
+//   useEffect(() => {
+//     const pages = document.querySelectorAll(".page");
+//     // console.log("pages count", pages);
+//     // console.log("nav bar", nav);
+//     // console.log("toggle", toggle);
 
-    // Loop through each page
-},[toggle, nav]);
+//     // Loop through each page
+// },[toggle, nav]);
 
 
 
@@ -33,7 +32,7 @@ const HomeBanner = () => {
       <div className="container-fluid p-0">
         <div className="row no-gutters full-screen">
           <div className=" col-xl-5 blue-bg">     {/*home-user-avtar*/}
-            <div className="d-flex  v-center-box"
+            <div className="d-flex v-center-box align-items-center"
             // home-user-avtar
             //  align-items-end
             >
@@ -51,15 +50,7 @@ const HomeBanner = () => {
                      <TypingAnimation /> 
                     </p>
                     <div className="btn-bar">
-                      {/* <button  
-                      // href="contact" 
-                      className="btn btn-theme"
-                      onClick={()=>{
-
-                              {/* <Contact/> */}
-                      {/* }}> 
-                        Contact me
-                      </button> */}
+                    
                
                      {/* <a href='/contact' className="btn btn-theme">Contact me</a> */} 
                      <button   className="btn btn-theme" onClick={() => changeNav("contact", false)}>

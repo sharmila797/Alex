@@ -9,7 +9,7 @@ const SectionContainer = ({
   title,
   subTitle,
   leftImage,
-  leftImageTitle,
+  // leftImageTitle,
 }) => {
   const { nav, changeNav } = useContext(AlexioContext);
   const activePageClass = () => (name === nav ? "" : "page--inactive");
@@ -21,17 +21,17 @@ const SectionContainer = ({
     >
       {" "}
       <div className="container-fluid p-0">
-        <div className="row no-gutters">
+        <div className="row no-gutters full-screen">
           <div
-            className="col-lg-4 col-xl-5 " //page-title
+            className=" col-xl-5 v-center-box d-flex align-items-center black-bg" //page-title
             // style={{ backgroundImage: `url(${leftImage})`}}
            > 
-           <img src="static/img/user2.png" alt title  style={{height:'110%',width:'150%'}}/>
-            <div className="v-center-box d-flex align-items-end">
-              <h2>{leftImageTitle ? leftImageTitle : title}</h2>
-            </div>
+           <img src="static/img/user2.png" alt title  />
+            {/* <div className="v-center-box d-flex align-items-end">
+              // <h2>{leftImageTitle ? leftImageTitle : title}</h2>
+            </div> */}
           </div>
-          <div className="col-lg-8 col-xl-7">
+          <div className="col-lg-9 col-xl-7">
             <div className="page-scroll">
               <div className="page-content">
                 {/* 

@@ -7,9 +7,9 @@ const Nav = () => {
 
   useEffect(() => {
     const pages = document.querySelectorAll(".page");
-    console.log("pages count", pages);
-    console.log("nav bar", nav);
-    console.log("toggle", toggle);
+    // console.log("pages count", pages);
+    // console.log("nav bar", nav);
+    // console.log("toggle", toggle);
 
     // Loop through each page
     pages.forEach((page, index) => {
@@ -67,13 +67,13 @@ const Nav = () => {
       </div>
       <div className="pages-nav__item">
         <a className="link link--page" onClick={() => changeNav("about", false)}>
-          About Us
+          About
         </a>
       </div>
       <div className="pages-nav__item">
         <a className="link link--page" onClick={() => 
           changeNav("contact", false)}>
-          Contact Me
+          Contact
         </a>
       </div>
     </nav>

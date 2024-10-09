@@ -7,7 +7,7 @@ const AboutUs = () => {
       title={"About Me"}
       subTitle={"WHO I AM"}
       leftImage="static/img/user2.png"
-      leftImageTitle={"About Me"}
+      // leftImageTitle={"About Me"}
     >
       <div className="row">
         {/* <div className="col-md-4">
@@ -117,51 +117,51 @@ const AboutUs = () => {
        Counter
      ==========================
      */}
-      <div className="counter-row m-50px-t p-40px-t lg-m-35px-t lg-p-25px-t sm-p-15px-t">
+      {/* <div className="counter-row m-50px-t p-40px-t lg-m-35px-t lg-p-25px-t sm-p-15px-t">
         <div className="row">
           <div className="col-md-3 col-sm-6 md-m-15px-tb">
-            <div className="counter-col counter-box">
-              <div className="counter-data" data-count={375}>
+            <div className="counter-col counter-box"> */}
+              {/* <div className="counter-data" data-count={375}>
                 <i className="theme-color ti-face-smile" />
                 <div className="count dark-color">375</div>
                 <h6>Happy Clients</h6>
-              </div>
-            </div>
-          </div>{" "}
+              </div> */}
+            {/* </div>
+          </div>{" "} */}
           {/* col */}
-          <div className="col-md-3 col-sm-6 md-m-15px-tb">
-            <div className="counter-col counter-box">
-              <div className="counter-data" data-count={375}>
+          {/* <div className="col-md-3 col-sm-6 md-m-15px-tb">
+            <div className="counter-col counter-box"> */}
+              {/* <div className="counter-data" data-count={375}>
                 <i className="theme-color ti-headphone" />
                 <div className="count dark-color">375</div>
                 <h6>Telephonic Talk</h6>
-              </div>
-            </div>
-          </div>{" "}
+              </div> */}
+            {/* </div>
+          </div>{" "} */}
           {/* col */}
-          <div className="col-md-3 col-sm-6 md-m-15px-tb">
-            <div className="counter-col counter-box">
-              <div className="counter-data" data-count={375}>
+          {/* <div className="col-md-3 col-sm-6 md-m-15px-tb">
+            <div className="counter-col counter-box"> */}
+              {/* <div className="counter-data" data-count={375}>
                 <i className="theme-color ti-camera" />
                 <div className="count dark-color">375</div>
                 <h6>Photo Capture</h6>
-              </div>
-            </div>
-          </div>{" "}
+              </div> */}
+            {/* </div>
+          </div>{" "} */}
           {/* col */}
-          <div className="col-md-3 col-sm-6 md-m-15px-tb">
-            <div className="counter-col counter-box">
-              <div className="counter-data" data-count={375}>
+          {/* <div className="col-md-3 col-sm-6 md-m-15px-tb">
+            <div className="counter-col counter-box"> */}
+              {/* <div className="counter-data" data-count={375}>
                 <i className="theme-color ti-thumb-up" />
                 <div className="count dark-color">375</div>
                 <h6>Projects</h6>
-              </div>
-            </div>
-          </div>{" "}
+              </div> */}
+            {/* </div>
+          </div>{" "} */}
           {/* col */}
-        </div>{" "}
+        {/* </div>{" "} */}
         {/* row */}
-      </div>
+      {/* </div> */}
     </SectionContainer>
   );
 };
