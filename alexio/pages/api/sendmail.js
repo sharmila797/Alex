@@ -2,11 +2,11 @@ import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
- 
+ console.log("request",req.body)
     const { name, email, message, captchaToken } = req.body;
 
     // Verify reCAPTCHA
-    const secretKey ="6LdYXF0qAAAAAKXfT8PLL7QucwSiXTOvMrTR_BGx";                                        // "6LclXFwqAAAAAEY2rvAdFhgRpa9RAXOqRS-78dcS"
+    const secretKey ="6LclXFwqAAAAAEY2rvAdFhgRpa9RAXOqRS-78dcS";                                        // "6LclXFwqAAAAAEY2rvAdFhgRpa9RAXOqRS-78dcS"
     const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${captchaToken}`;
     
     const captchaResponse = await fetch(verificationUrl, { method: 'POST' });
@@ -21,8 +21,8 @@ export default async function handler(req, res) {
     let transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user:'sharmi97.ss@gmail.com',            //'info@anandbabu.in', // Gmail account
-        pass:'qjvytorzokxiwbsk',                         //'*RDbB4&&d%&H4mJ%', // App password
+        user:'info@anandbabu.in',               //'info@anandbabu.in', // Gmail account
+        pass:'macjsxvjvwzczfxb',                         //'*RDbB4&&d%&H4mJ%', // App password
       },
     });
 
@@ -30,7 +30,7 @@ export default async function handler(req, res) {
       // Send mail
       await transporter.sendMail({
         from: `"${name}" <${email}>`, // Sender address
-        to:'sharmi97.ss@gmail.com',                       //'info@anandbabu.in', // Receiver email
+        to:'info@anandbabu.in',                        //'info@anandbabu.in', // Receiver email
         subject: `Message from ${name}`, // Subject line
         html: `<p><strong>Name:</strong> ${name}</p>
                <p><strong>Email:</strong> ${email}</p>

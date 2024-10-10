@@ -174,7 +174,7 @@ const Contact = () => {
 
 export default function ContactWithRecaptcha() {
   return (
-    <GoogleReCaptchaProvider reCaptchaKey= "6LdYXF0qAAAAAOFCtUr9yWNcp0dx1XMAW_X5MJbj">    {/* reCaptchaKey= "6LclXFwqAAAAAJnHqdtQUdgGeOKVGb6D7WST6ROj"  */}     {/* Use your reCAPTCHA v3 site key */}
+    <GoogleReCaptchaProvider reCaptchaKey= "6LclXFwqAAAAAJnHqdtQUdgGeOKVGb6D7WST6ROj">    {/* reCaptchaKey= "6LclXFwqAAAAAJnHqdtQUdgGeOKVGb6D7WST6ROj"  */}     {/* Use your reCAPTCHA v3 site key */}
       <Contact />
     </GoogleReCaptchaProvider>
   );
