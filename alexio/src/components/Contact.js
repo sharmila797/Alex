@@ -10,7 +10,8 @@ const Contact = () => {
   });
   const { executeRecaptcha } = useGoogleReCaptcha(); // reCAPTCHA v3 hook
   const [loading, setLoading] = useState(false);
-  const [responseMessage, setResponseMessage] = useState('');
+  const [responseMessage, setResponseMessage] = useState({status:false,msg:''});
+
 
   const onChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -22,13 +23,13 @@ const Contact = () => {
     setResponseMessage('');
 
     if (!executeRecaptcha) {
-      setResponseMessage('reCAPTCHA not ready');
+      setResponseMessage({msg:'reCAPTCHA not ready'});
       return;
     }
 
     const token = await executeRecaptcha('contact_form'); // v3 executes an action
     if (!token) {
-      setResponseMessage('reCAPTCHA verification failed.');
+      setResponseMessage({msg:'reCAPTCHA verification failed.'});
       setLoading(false);
       return;
     }
@@ -44,13 +45,15 @@ const Contact = () => {
 
       const data = await res.json();
       if (data.success) {
-        setResponseMessage('Email sent successfully!');
+        setResponseMessage({status:true,msg:'Email sent successfully!'});
         setFormData({ name: "", email: "", message: "" });
       } else {
-        setResponseMessage(`Error sending email: ${data.message}`);
+        setResponseMessage({msg:`Error sending email: ${data.message}`});
+        setFormData({ name: "", email: "", message: "" });
       }
     } catch (error) {
-      setResponseMessage('Failed to send email.');
+      setResponseMessage({msg:'Failed to send email.'});
+      setFormData({ name: "", email: "", message: "" });
     }
 
     setLoading(false);
@@ -67,7 +70,7 @@ const Contact = () => {
         <div className="col-lg-12 m-30px-b sm-m-15px-b">
           <div className="contact-form">
             <h4 className="dark-color font-alt m-20px-b">Say Something</h4>
-            <form className="contactform" onSubmit={(e) => handleSubmit(e)}>
+            <form className=" " onSubmit={(e) => handleSubmit(e)}>
               <div className="row">
                 <div className="col-md-6">
                   <div className="form-group">
@@ -117,16 +120,51 @@ const Contact = () => {
                     </button>
                   </div>
                   {/* {responseMessage && <p>{responseMessage}</p>} */}
+                <div><br/></div>
+                
+                
                   <span
                     id="suce_message"
-                    className="text-success mt-3"
-                    // style={{ display: success ? "block" : "none" }}
+                    className="mt-3"
+                     style={{ color: responseMessage.status ? "green" : "red" }}
                   >
-                  {responseMessage && <p>{responseMessage}</p>}
+                  {responseMessage && <p>{responseMessage.msg}</p>}
                   </span>
                 </div>
               </div>
             </form>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        {/* <div className="col-md-4 m-15px-tb">
+          <div className="contact-info">
+            <i className="theme-color ti-location-pin" />
+            <h6 className="dark-color font-alt">Our Address</h6>
+            <p>123 Stree New York City , USA 750065.</p>
+          </div>
+        </div> */}
+        <div className="col-md-4 m-15px-tb">
+          <div className="contact-info">
+            <i className="theme-color ti-mobile" />
+            <h6 className="dark-color font-alt">Phone</h6>
+            <p>
+            +91 91766 ANAND
+              {/* <br />
+              Office: +004 444 444 */}
+              <br />
+            </p>
+          </div>
+        </div>
+        <div className="col-md-4 m-15px-tb sm-m-0px-b">
+          <div className="contact-info">
+            <i className="theme-color ti-email" />
+            <h6 className="dark-color font-alt">Email</h6>
+            <p>
+            info@anandbabu.in
+              <br />
+              {/* contact@domain.com */}
+            </p>
           </div>
         </div>
       </div>
@@ -136,8 +174,10 @@ const Contact = () => {
 
 export default function ContactWithRecaptcha() {
   return (
-    <GoogleReCaptchaProvider reCaptchaKey= "6LclXFwqAAAAAJnHqdtQUdgGeOKVGb6D7WST6ROj">         {/* Use your reCAPTCHA v3 site key */}
+    <GoogleReCaptchaProvider reCaptchaKey= "6LdYXF0qAAAAAOFCtUr9yWNcp0dx1XMAW_X5MJbj">    {/* reCaptchaKey= "6LclXFwqAAAAAJnHqdtQUdgGeOKVGb6D7WST6ROj"  */}     {/* Use your reCAPTCHA v3 site key */}
       <Contact />
     </GoogleReCaptchaProvider>
   );
 }
+
+

@@ -7,9 +7,7 @@ const Nav = () => {
 
   useEffect(() => {
     const pages = document.querySelectorAll(".page");
-    // console.log("pages count", pages);
-    // console.log("nav bar", nav);
-    // console.log("toggle", toggle);
+  
 
     // Loop through each page
     pages.forEach((page, index) => {

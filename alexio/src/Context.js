@@ -39,7 +39,7 @@ const reducer = (state, action) => {
 const AlexioState = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const changeNav = useCallback((value, toggleValue) => {
+  const changeNav = useCallback((value, toggleValue) => { 
     dispatch({
       type: NAV,
       payload: value,

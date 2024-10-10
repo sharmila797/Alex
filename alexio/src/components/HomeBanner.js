@@ -5,21 +5,9 @@ import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
 const HomeBanner = () => {
-  const[state,setstate]=useState({key:0})
+ 
   const { changeNav, toggle, nav } = useContext(AlexioContext);
   const activePageClass = () => ("home" === nav ? "" : "page--inactive");
-
-
-//   useEffect(() => {
-//     const pages = document.querySelectorAll(".page");
-//     // console.log("pages count", pages);
-//     // console.log("nav bar", nav);
-//     // console.log("toggle", toggle);
-
-//     // Loop through each page
-// },[toggle, nav]);
-
-
 
   return (
     <div

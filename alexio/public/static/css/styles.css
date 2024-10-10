@@ -216,7 +216,7 @@ body.dark-body {
 -----------------------------------*/
 
 .dark-color {
-  color: #292929;
+  color: #1d1c1c;
 }
 .yellow-bg {
   background-color: #f8c964;
@@ -1132,7 +1132,7 @@ body.dark-body {
 .form-group .form-control {
   outline: none;
   box-shadow: none;
-  height: 50px;
+  height: 60px;
   border: 1px solid #d4d4d4;
   width: 100%;
   font-size: 14px;
@@ -1186,7 +1186,8 @@ body.dark-body {
   margin: 0 0 6px;
 }
 .contact-info i {
-  font-size: 28px;
+  font-size: 30px;
+  font-weight: 500;
   margin-bottom: 20px;
   display: inline-block;
   vertical-align: top;
