@@ -23,7 +23,7 @@ const SectionContainer = ({
       <div className="container-fluid p-0">
         <div className="row no-gutters full-screen">
           <div
-            className=" col-xl-5 v-center-box d-flex align-items-center black-bg" //page-title
+            className=" col-xl-5 v-center-box d-flex align-items-end black-bg" //page-title
             // style={{ backgroundImage: `url(${leftImage})`}}
            > 
            <img src="static/img/user2.png" alt title  />

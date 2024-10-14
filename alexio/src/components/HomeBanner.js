@@ -20,7 +20,7 @@ const HomeBanner = () => {
       <div className="container-fluid p-0">
         <div className="row no-gutters full-screen">
           <div className=" col-xl-5 blue-bg">     {/*home-user-avtar*/}
-            <div className="d-flex v-center-box align-items-center"
+            <div className="d-flex v-center-box align-items-end"
             // home-user-avtar
             //  align-items-end
             >
