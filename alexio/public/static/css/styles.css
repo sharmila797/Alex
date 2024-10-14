@@ -317,11 +317,11 @@ body.dark-body {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   padding: 3px 10px;
   font-weight: 600;
   letter-spacing: 3px;
-  font-size: 11px;
+  font-size: 12px;
   margin: 0 0 8px;
   text-transform: uppercase;
 }
@@ -338,8 +338,8 @@ body.dark-body {
 }
 
 .section-titel h2 {
-  font-size: 45px;
-  font-weight: 700;
+  font-size: 50px;
+  font-weight: 750;
   position: relative;
   z-index: 1;
   border-bottom: 1px solid #ddd;

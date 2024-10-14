@@ -161,7 +161,7 @@ const Contact = () => {
             <i className="theme-color ti-email" />
             <h6 className="dark-color font-alt">Email</h6>
             <p>
-            info@anandbabu.in
+            dr.ababu.mail@gmail.com
               <br />
               {/* contact@domain.com */}
             </p>
