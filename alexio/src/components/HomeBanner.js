@@ -19,12 +19,12 @@ const HomeBanner = () => {
       
       <div className="container-fluid p-0">
         <div className="row no-gutters full-screen">
-          <div className=" col-xl-5 blue-bg">     {/*home-user-avtar*/}
+          <div className="col-xl-5 blue-bg">     {/*home-user-avtar*/}
             <div className="d-flex v-center-box align-items-end"
             // home-user-avtar
             //  align-items-end
             >
-              <img src="static/img/user1.png" title alt />
+              <img src="static/img/user1.png" title alt  style={{ width: '100%', height: 'auto' }}/>
             </div>
           </div>
           <div className="col-lg-9 col-xl-7">
