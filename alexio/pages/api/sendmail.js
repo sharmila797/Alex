@@ -1,12 +1,15 @@
 import nodemailer from 'nodemailer';
-
+import 'dotenv/config'; 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
 
     const { name, email, message, captchaToken } = req.body;
 
+    console.log('User:', process.env.user);
+    console.log('Pass:', process.env.pass);
+
     // Verify reCAPTCHA
-    const secretKey ="6LclXFwqAAAAAEY2rvAdFhgRpa9RAXOqRS-78dcS";                                        // "6LclXFwqAAAAAEY2rvAdFhgRpa9RAXOqRS-78dcS"
+    const secretKey =process.env.secret;                                      
     const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${captchaToken}`;
     
     const captchaResponse = await fetch(verificationUrl, { method: 'POST' });
@@ -21,16 +24,20 @@ export default async function handler(req, res) {
     let transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user:'dr.ababu.mail@gmail.com',               //'info@anandbabu.in', // Gmail account
-        pass:'bcjxuttxcesilcwb',                         //'*RDbB4&&d%&H4mJ%', // App password
+        user:process.env.user,              
+        pass: process.env.pass                             
       },
     });
+
+
+
+
 
     try {
       // Send mail
       await transporter.sendMail({
         from: `"${name}" <${email}>`, // Sender address
-        to:'dr.ababu.mail@gmail.com',                        //'info@anandbabu.in', // Receiver email
+        to:process.env.user,                       
         subject: `Message from ${name}`, // Subject line
         html: `<p><strong>Name:</strong> ${name}</p>
                <p><strong>Email:</strong> ${email}</p>

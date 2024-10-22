@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import SectionContainer from "./SectionContainer";
 import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
+// import 'dotenv/config';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,14 @@ const Contact = () => {
   const { executeRecaptcha } = useGoogleReCaptcha(); // reCAPTCHA v3 hook
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState({status:false,msg:''});
+  const [recaptchaReady, setRecaptchaReady] = useState(false);
+
+
+  useEffect(() => {
+    if (executeRecaptcha) {
+      setRecaptchaReady(true); // Mark as ready
+    }
+  }, [executeRecaptcha]);
 
 
   const onChange = (e) => {
@@ -22,7 +31,7 @@ const Contact = () => {
     setLoading(true);
     setResponseMessage('');
 
-    if (!executeRecaptcha) {
+    if (!recaptchaReady) {
       setResponseMessage({msg:'reCAPTCHA not ready'});
       return;
     }
@@ -174,7 +183,7 @@ const Contact = () => {
 
 export default function ContactWithRecaptcha() {
   return (
-    <GoogleReCaptchaProvider reCaptchaKey= "6LclXFwqAAAAAJnHqdtQUdgGeOKVGb6D7WST6ROj">    {/* reCaptchaKey= "6LclXFwqAAAAAJnHqdtQUdgGeOKVGb6D7WST6ROj"  */}     {/* Use your reCAPTCHA v3 site key */}
+    <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}>       {/* Use your reCAPTCHA v3 site key */}
       <Contact />
     </GoogleReCaptchaProvider>
   );
